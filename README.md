@@ -8,7 +8,6 @@
 ## 任务3： JDBC_通过Statement执行更新操作
   * 项目文件名： `JDBC_03`
   * 说明：
-
         * 需要新增 customer 数据库表 
         * 属性包括 id，name，email，birth 
         * 类型分别为 int(6),varchar(25),varchar(25),date
@@ -16,3 +15,7 @@
 ## 任务4： JDBC_通过ResultSet执行查询操作
   * 项目文件名： `JDBC_04`
   * 说明：相应配置见 `JDBC_o3`
+## 任务5： JDBC_第一天复习
+  * 项目文件名： `revie_1_2_3_4`
+  * 说明：本案例项目总结任务1、2、3、4中内容
+      主要包括：`Driver`   `DriverManager`   `Statement`  `Statement` 对象的使用
