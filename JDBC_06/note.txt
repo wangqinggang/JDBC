@@ -1,0 +1,51 @@
+1. 向数据表中插入一条 Student 记录
+1). 新建一个 Student , 对应examstudents 数据表
+
+
+class Student{
+		//流水号
+		int flowId;
+		//考试类型
+		int type;
+		//身份证号
+		String idCard;
+		//准考证号
+		String examCard;
+		//学生名
+		String studentName;
+		//学生地址
+		String Location;
+		//考试分数
+		int grade;
+}
+
+
+2). 在测试方法 testaddStudent()中
+
+//1. 获取从控制台输入的Student 对象：
+ Student student=getStudentFromConsole();
+ 
+
+//2. 调用 addStudent(Studeng stu) 方法执行插入操作
+
+
+3). 新建一个方法：void addStudent(Student student)
+把参数 Student 对象插入到数据库中。
+
+addStudent(Student student){
+	//1.准备一条SQL语句：
+	String sql="INSERT INTO examstudent " + 
+		"VALUES("+ student.flowId
+		+","+student.getType()
+		+","+student.getIdCard()
+		+","+student.getExamCard()
+		+","+student.getStudentName()
+		+","+student.getLocation()
+		+","+student.getGrade()+)";
+		
+	//2.调用 JDBCTools 类的 update(sql) 方法执行插入操作
+		
+	
+}
+
+

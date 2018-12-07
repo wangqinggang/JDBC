@@ -19,3 +19,8 @@
   * 项目文件名： `revie_1_2_3_4`
   * 说明：本案例项目总结任务1、2、3、4中内容
       主要包括：`Driver`   `DriverManager`   `Statement`  `Statement` 对象的使用
+
+## 任务6： JDBC_以面向对象的方式编写JDBC程序
+  * 项目文件名： `JDBC_06`
+  * 说明：以面向对象方式查询学生信息，具体要求在PPT内（最外层ppt文件）
+  *   `examstudent.sql` 文件为该项目所需数据库表
