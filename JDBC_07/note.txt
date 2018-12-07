@@ -1,0 +1,93 @@
+2. 使用 PreparedStatement 对象
+
+1). Why?
+  ①. 使用 Statement 需要进行拼写 SQL 语句，很辛苦，而且容易出错。
+    String sql = "INSERT INTO examstudent " + "VALUES(" + student.getFlowId() + "," + student.getType() + ",'"
+				+ student.getIdCard() + "','" + student.getExamCard() + "','" + student.getStudentName() + "','"
+				+ student.getLocation() + "'," + student.getGrade() + ")";
+  ②. 可以有效的防止SQL 注入
+> SQL 注入是利用某些系统没有对用户输入的数据进行充分的检查，
+而在用户输入数据中 注入非法的 SQL 语句段 或命令，从而利用系统地SQL 引擎完成恶意行为的做法
+
+> 对Java 而言，要防止SQL 注入，只要用 "PreparedStatement" 取代 "Statement" 就可以了
+
+String username="a' OR password=";
+
+String password=" OR '1'='1";
+
+// SELECT * FROM users WHERE username='a' OR password=' AND password =' OR '1'='1'
+
+String sql ="SELECT * FROM users WHERE username=? AND  password=? ";
+			
+System.out.println(sql);
+
+
+
+2). PreparedStatement 是 Statement 的子接口，可以穿入带占位符的 SQL 语句，
+          并且提供了补充占位符变量的方法
+
+2). 使用 PreparedStatement.
+①. 创建 PreparedStatement 
+	PreparedStatement ps=connection.PreparedStatement(sql);
+	
+②. 调用 PreparedStatement 的 setXxx(int index,object val)  设置占位符的值
+index 从 1 开始
+
+
+③. 执行 SQL 语句：excuteQuery() 或 excuteUpdate().
+注意：执行时不再传入 SQL 语句。
+
+String sql= "INSERT INTO examstudent VALUES(?,?,?,?,?,?,?)"
+
+
+1. 向数据表中插入一条 Student 记录
+1). 新建一个 Student , 对应examstudents 数据表
+
+
+class Student{
+		//流水号
+		int flowId;
+		//考试类型
+		int type;
+		//身份证号
+		String idCard;
+		//准考证号
+		String examCard;
+		//学生名
+		String studentName;
+		//学生地址
+		String Location;
+		//考试分数
+		int grade;
+}
+
+
+2). 在测试方法 testaddStudent()中
+
+//1. 获取从控制台输入的Student 对象：
+ Student student=getStudentFromConsole();
+ 
+
+//2. 调用 addStudent(Studeng stu) 方法执行插入操作
+
+
+3). 新建一个方法：void addStudent(Student student)
+把参数 Student 对象插入到数据库中。
+
+addStudent(Student student){
+	//1.准备一条SQL语句：
+	String sql="INSERT INTO examstudent " + 
+		"VALUES("+ student.flowId
+		+","+student.getType()
+		+","+student.getIdCard()
+		+","+student.getExamCard()
+		+","+student.getStudentName()
+		+","+student.getLocation()
+		+","+student.getGrade()+)";
+		
+	//2.调用 JDBCTools 类的 update(sql) 方法执行插入操作
+		
+	
+}
+
+
