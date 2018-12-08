@@ -1,0 +1,25 @@
+1. DAO: Data Access Object
+
+Why: 实现功能的模块话，有利于代码的升级和维护
+DAO 可以被子类继承和使用
+
+What： 访问数据库信息的类，包括了对数据库的 CRUD(create,read,update,delete)
+
+how： 使用JDBC 编写 DAO 可能会用到的方法
+
+// INSERT,UPDATE，DELETE 操作都可以包含在其中
+
+void update(String sql,Object ... args);
+
+// 查询一条记录 返回对应的对象
+<T> T get(Class<T> clazz,String sql,Object ...orgs);
+
+// 查询多条记录，返回对应的对象的集合
+<T> List<T> getForList(Class<T> clazz,String sql,Object ... orgs);
+
+// 返回某条记录的某一个字段的值 或 一个统计的值(一共有多少条记录等)
+<E> E getForValue(String sql,Object ... args);
+
+
+
+
