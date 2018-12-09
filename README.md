@@ -42,3 +42,7 @@
 ## 任务10： JDBC_DAO设计模式
   * 项目文件名： `JDBC_10`
   * 说明：JDBC_DAO设计模式详解，并通过Junit 测试 调用数据库更新和查询一条记录
+
+## 任务11： JDBC_使用BeanUtils工具类操作JavaBean
+  * 项目文件名： `JDBC_11`
+  * 说明：JDBC_使用BeanUtils工具类操作JavaBean，设置和获取JavaBean 的属性和方法 ，注意导入 `commons-beanutils-1.9.3.jar` 和  `commons-logging-1.2.jar`
