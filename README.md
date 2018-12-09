@@ -46,3 +46,7 @@
 ## 任务11： JDBC_使用BeanUtils工具类操作JavaBean
   * 项目文件名： `JDBC_11`
   * 说明：JDBC_使用BeanUtils工具类操作JavaBean，设置和获取JavaBean 的属性和方法 ，注意导入 `commons-beanutils-1.9.3.jar` 和  `commons-logging-1.2.jar`
+
+## 任务12： JDBC_重构DAO查询方法&amp;完成DAO编写
+  * 项目文件名： `JDBC_12`
+  * 说明：JDBC_重构DAO查询方法&amp;完成DAO编写，包括更新记录，获取一条记录，获取多条记录，获取某一特定属性
