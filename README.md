@@ -63,3 +63,10 @@
   * 项目文件名： `JDBC_14`
   * 说明：使用重载的 prepareStatement(sql,flag) 来生成 PreparedStatement 对象
   * 通过 getGeneratedKeys() 获取包含了新生成的主键的 ResultSet 对象 ，在 ResultSet 中只有一列 GENERATED_KEY ，用于存放新生成的主键值
+
+## 任务15： JDBC_处理BLOB
+  * 项目文件名： `JDBC_15`
+  * 说明：写入读取blob 类型数据：本项目使用图片作为上传下载对象，注意在`customers`表中新增一条`picture`属性，类型为 `mediumblob`
+
+
+  

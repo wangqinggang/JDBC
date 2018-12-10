@@ -1,0 +1,47 @@
+2. Java 类的属性：
+
+1). 在 Java EE 中，Java 类的属性通过 getter，setter 来定义： get(或set) 方法，去除掉
+get(或 set) 后，字母小写即为Java 类的属性
+
+2). 而以前叫的那个属性，即成员变量，称之为字段
+
+3). 一般情况下，字段名和属性名一致
+
+3). 操作 Java 类的属性有一个工具包：beanutils
+① 搭建环境:需要同时加入：commons-beanutils-1.9.3.jar 和  commons-logging-1.2.jar
+
+
+①. setProperty()
+BeanUtils.setProperty(object, "idCard", "370782199707196614");
+
+②. getProperty()
+Object val=BeanUtils.getProperty(object, "idCard");
+
+
+
+
+1. DAO: Data Access Object
+
+Why: 实现功能的模块话，有利于代码的升级和维护
+DAO 可以被子类继承和使用
+
+What： 访问数据库信息的类，包括了对数据库的 CRUD(create,read,update,delete)
+
+how： 使用JDBC 编写 DAO 可能会用到的方法
+
+// INSERT,UPDATE，DELETE 操作都可以包含在其中
+
+void update(String sql,Object ... args);
+
+// 查询一条记录 返回对应的对象
+<T> T get(Class<T> clazz,String sql,Object ...orgs);
+
+// 查询多条记录，返回对应的对象的集合
+<T> List<T> getForList(Class<T> clazz,String sql,Object ... orgs);
+
+// 返回某条记录的某一个字段的值 或 一个统计的值(一共有多少条记录等)
+<E> E getForValue(String sql,Object ... args);
+
+
+
+
