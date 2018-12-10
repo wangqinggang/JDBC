@@ -58,3 +58,8 @@
 	* 结合反射可以写出通用的查询方法。
   * DatabaseMetaData 是描述 数据库 的元数据对象
 	* 可以由 Connection 得到
+
+## 任务14： JDBC_获取插入记录的主键值
+  * 项目文件名： `JDBC_14`
+  * 说明：使用重载的 prepareStatement(sql,flag) 来生成 PreparedStatement 对象
+  * 通过 getGeneratedKeys() 获取包含了新生成的主键的 ResultSet 对象 ，在 ResultSet 中只有一列 GENERATED_KEY ，用于存放新生成的主键值
