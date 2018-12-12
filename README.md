@@ -95,4 +95,6 @@
   * 项目文件名： `JDBC_22`
   * 说明：JDBC_使用DBUtils进行查询操作
 
-##
+## 任务23： JDBC_使用DBUtils编写通用的DAO
+  * 项目文件名： `JDBC_23`
+  * 说明：JDBC_使用DBUtils编写通用的DAO
